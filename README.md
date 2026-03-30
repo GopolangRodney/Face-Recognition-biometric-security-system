@@ -62,8 +62,8 @@ python face_recognition_app.py
 #### Option 2: Authenticate (Verify Face)
 2. Position your face in the camera frame
 3. The system automatically scans and compares your face
-4. 🟢 **GREEN border + "PASSED"** = Authentication successful!
-5. 🔴 **RED border + "FAILED"** = Face does not match
+4. **GREEN border + "PASSED"** = Authentication successful!
+5. **RED border + "FAILED"** = Face does not match
 6. You get 3 attempts before lockout
 
 #### Option 3: Exit
@@ -85,15 +85,7 @@ Exit the application
    - Distance < 0.6 = **MATCH** (Green border)
    - Distance ≥ 0.6 = **NO MATCH** (Red border)
 
-## File Structure
 
-```
-Face Recognition Security System/
-├── face_recognition_app.py      # Main application
-├── requirements.txt              # Python dependencies
-├── README.md                      # This file
-└── face_encoding.pkl             # Stored face encoding (created after enrollment)
-```
 
 ## Troubleshooting
 
@@ -132,12 +124,6 @@ pip install --upgrade --force-reinstall -r requirements.txt
 - For sensitive applications, consider adding encryption
 - Re-enroll if you significantly change appearance (grow beard, cut hair, etc.)
 
-## Performance
-
-- **Enrollment**: ~2-3 seconds per face
-- **Authentication**: Real-time (30 FPS on modern hardware)
-- **Memory**: ~50-100 MB per face stored
-- **CPU**: ~20-30% usage during operation
 
 ## Customization
 
@@ -149,24 +135,6 @@ max_attempts = 3           # Maximum authentication attempts
 model = 'hog'             # Or 'cnn' for higher accuracy (slower)
 ```
 
-## Future Enhancements
-
-- [ ] Multiple face passwords for different users
-- [ ] Encryption of stored face encodings
-- [ ] Web interface for remote enrollment
-- [ ] Liveness detection (prevent spoofing)
-- [ ] Integration with system lock/unlock
-- [ ] Detailed audit logs
-- [ ] Database backend for enterprise use
-
-
-## Support
-
-For issues or questions, check that:
-1. All dependencies are correctly installed
-2. Your camera is accessible and working
-3. You have Python 3.7 or higher
-4. Good lighting conditions exist during enrollment
 
 ---
 
